@@ -15,11 +15,12 @@ namespace GameStore.WebUI.Controllers
             this._repository = repository;
         }
         // GET: Game
-        public ViewResult GameList(int page = 1)
+        public ViewResult GameList(string category, int page = 1)
         {
             GamesListViewModel model = new GamesListViewModel
             {
                 Games = _repository.Games
+                    .Where(c => category == null || c.Category == category)
                     .OrderBy(game => game.GameId)
                     .Skip((page - 1) * PageSize)
                     .Take(PageSize),
@@ -27,8 +28,11 @@ namespace GameStore.WebUI.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = _repository.Games.Count()
-                }
+                    TotalItems = (category == null) ?
+                    _repository.Games.Count() :
+                    _repository.Games.Where(g => g.Category == category).Count()                    
+                },
+                Category = category
             };
             return View(model);
         }

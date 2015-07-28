@@ -97,6 +97,7 @@
     <Compile Include="Concrete\GameDbContext.cs" />
     <Compile Include="Concrete\GameDbRepository.cs" />
     <Compile Include="Concrete\LocalGameDB.cs" />
+    <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

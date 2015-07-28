@@ -5,16 +5,12 @@
     ViewBag.Title = "Games";
 }
 
-<h1>All Games In The Store:</h1>
+<h1>Game List</h1>
 
 @foreach(var p in @Model.Games)
 {
-    <div>
-        <h3>@p.Name</h3>
-        <p>@p.Description</p>
-        <h4>$@p.Price</h4>
-    </div>
+    @Html.Partial("GameSummary", p)
 }
-<div>
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("GameList", new { page = x }))
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("GameList", new { page = x, category = Model.Category }))
 </div>
