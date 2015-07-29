@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using GameStore.Domain.Abstract;
 using GameStore.Domain.Concrete;
 using GameStore.Domain;
+using System.Configuration;
 
 namespace GameStore.WebUI.Infrastructure
 {
@@ -31,14 +32,17 @@ namespace GameStore.WebUI.Infrastructure
         private void AddBindings()
         {  
             //connect with database on local PC
-           _kernel.Bind<IGameRepository>().To<GameDbRepository>();
-            /*
-            //use a list for demonstration
-            Mock<IGameRepository> mock = new Mock<IGameRepository>();
-            LocalGameDBContext localGames = new LocalGameDBContext();
-            mock.Setup(m => m.Games).Returns(localGames.Games);
-            _kernel.Bind<IGameRepository>().ToConstant(mock.Object);
-             * */
+            _kernel.Bind<IGameRepository>().To<GameDbRepository>();
+
+            EmailSettings emailSettings = new EmailSettings
+            {
+                WriteAsFile = bool.Parse(ConfigurationManager
+                .AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+
+            _kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
+                .WithConstructorArgument("settings", emailSettings);
+
         }
     }
 }
