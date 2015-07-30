@@ -14,14 +14,16 @@ namespace GameStore.WebUI.Controllers
         {
             this._repository = repository;
         }
-        public PartialViewResult Menu(string category = null)
+        public PartialViewResult Menu(string category = null, bool horizontalNav = false)
         {
             ViewBag.SelectedCategory = category;
             IEnumerable<string> categories = _repository.Games
                 .Select(game => game.Category)
                 .Distinct()
                 .OrderBy(x => x);
-            return PartialView(categories);
+
+            //string viewName = horizontalNav ? "MenuHorizontal" : "Menu";
+            return PartialView("FlexMenu", categories);
         }
     }
 }
