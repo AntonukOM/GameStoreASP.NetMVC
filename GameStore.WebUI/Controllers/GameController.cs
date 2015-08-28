@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Linq;
 using GameStore.WebUI.Models;
+using GameStore.Domain.Entities;
 
 namespace GameStore.WebUI.Controllers
 {
@@ -35,6 +36,20 @@ namespace GameStore.WebUI.Controllers
                 Category = category
             };
             return View(model);
+        }
+
+        public FileContentResult GetImage(int gameId)
+        {
+            Game game = _repository.Games.FirstOrDefault(g => g.GameId == gameId);
+            if(game != null)
+            {
+                return File(game.ImageData, game.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
     }

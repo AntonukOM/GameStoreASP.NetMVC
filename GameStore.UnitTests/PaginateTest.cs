@@ -9,7 +9,6 @@ using System;
 using System.Web.Mvc;
 using GameStore.WebUI.HtmlHelpers;
 using GameStore.WebUI.Controllers;
-using Microsoft.CSharp.RuntimeBinder;
 
 namespace GameStore.UnitTests
 {

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Ninject;
-using Moq;
 using System.Web.Mvc;
 using GameStore.Domain.Abstract;
 using GameStore.Domain.Concrete;
-using GameStore.Domain;
 using System.Configuration;
+using GameStore.WebUI.Infrastructure.Abstract;
+using GameStore.WebUI.Infrastructure.Concrete;
 
 namespace GameStore.WebUI.Infrastructure
 {
@@ -33,6 +31,7 @@ namespace GameStore.WebUI.Infrastructure
         {  
             //connect with database on local PC
             _kernel.Bind<IGameRepository>().To<GameDbRepository>();
+            _kernel.Bind<IAuthProvider>().To<FormAuthProvider>();
 
             EmailSettings emailSettings = new EmailSettings
             {
@@ -42,7 +41,6 @@ namespace GameStore.WebUI.Infrastructure
 
             _kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);
-
         }
     }
 }

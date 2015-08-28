@@ -1,6 +1,6 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
+
 namespace GameStore.Domain.Entities
 {
     public class Game
@@ -24,6 +24,9 @@ namespace GameStore.Domain.Entities
         [Display(Name = "Price")]
         [Required]
         [Range(0.01, double.MaxValue, ErrorMessage = "Pleas enter correct price value")]
-        public decimal Price { get; set; }    
+        public decimal Price { get; set; }
+        
+        public byte[] ImageData { get; set; }
+        public string ImageMimeType { get; set; }
     }
 }

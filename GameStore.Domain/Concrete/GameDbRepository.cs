@@ -26,6 +26,8 @@ namespace GameStore.Domain.Concrete
                     entryGame.Description = game.Description;
                     entryGame.Category = game.Category;
                     entryGame.Price = game.Price;
+                    entryGame.ImageData = game.ImageData;
+                    entryGame.ImageMimeType = game.ImageMimeType;
                 }                
             }
             _context.SaveChanges();

@@ -4,11 +4,8 @@ using GameStore.WebUI.Controllers;
 using GameStore.WebUI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace GameStore.UnitTests
@@ -132,7 +129,7 @@ namespace GameStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_View_Cart_Contents()
+        public void CanViewCartContents()
         {
             Cart cart = new Cart();
 

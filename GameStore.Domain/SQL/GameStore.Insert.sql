@@ -1,6 +1,4 @@
-use GameStore;
-
-SELECT * FROM Games;
+USE GameStore;
 
 SET IDENTITY_INSERT Games on;
 INSERT INTO Games(GameId, Name, Description, Category, Price) 
@@ -22,5 +20,3 @@ VALUES
 	(9, 'Crysis 3', 'Действие игры разворачивается в 2047 году, а вам предстоит выступить в роли Пророка.', 'Шутер', 129.00),
 	(10, 'Dead Space 3', 'В Dead Space 3 Айзек Кларк и суровый солдат Джон Карвер отправляются в космическое путешествие, чтобы узнать о происхождении некроморфов.', 'Шутер', 49.00);
 SET IDENTITY_INSERT Games off;
-
-DBCC CHECKIDENT ('Games', RESEED, 10);

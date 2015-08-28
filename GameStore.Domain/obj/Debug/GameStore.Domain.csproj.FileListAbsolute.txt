@@ -21,3 +21,26 @@ C:\Users\Sword\documents\visual studio 2013\Projects\GameStore\GameStore.Domain\
 C:\Users\Sword\documents\visual studio 2013\Projects\GameStore\GameStore.Domain\obj\Debug\GameStore.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Sword\documents\visual studio 2013\Projects\GameStore\GameStore.Domain\obj\Debug\GameStore.Domain.dll
 C:\Users\Sword\documents\visual studio 2013\Projects\GameStore\GameStore.Domain\obj\Debug\GameStore.Domain.pdb
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\GameStore.Domain.dll.config
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\GameStore.Domain.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\GameStore.Domain.pdb
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Helpers.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Mvc.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Razor.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Helpers.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Mvc.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.Razor.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\obj\Debug\GameStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\obj\Debug\GameStore.Domain.dll
+C:\Users\Sasha\Documents\GitHub\GameStoreASP.NetMVC\GameStore.Domain\obj\Debug\GameStore.Domain.pdb

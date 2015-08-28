@@ -2,9 +2,11 @@
 using GameStore.Domain.Entities;
 using System.Web.Mvc;
 using System.Linq;
+using System.Web;
 
 namespace GameStore.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         IGameRepository _repository;
@@ -25,10 +27,16 @@ namespace GameStore.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Game game)
+        public ActionResult Edit(Game game, HttpPostedFileBase image = null)
         {
             if(ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    game.ImageMimeType = image.ContentType;
+                    game.ImageData = new byte[image.ContentLength];
+                    image.InputStream.Read(game.ImageData, 0, image.ContentLength);
+                }
                 _repository.SaveGame(game);
                 TempData["message"] = string.Format("Changes is the game \"{0}\" was saved", game.Name);
                 return RedirectToAction("Index");
