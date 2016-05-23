@@ -39,5 +39,8 @@
     <div class="panel-footer">
         @Html.ActionLink("Add Game", "Create", null,
             new { @class = "btn btn-default" })
+
+        @Html.ActionLink("Return in main menu", "GameList", new { Controller = "Game"},
+            new { @class = "btn btn-link" })
     </div>
 </div>

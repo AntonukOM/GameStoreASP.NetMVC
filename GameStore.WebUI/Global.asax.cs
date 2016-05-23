@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
 using GameStore.Domain.Concrete;
+using System.IO;
 
 namespace GameStore.WebUI
 {
@@ -18,6 +19,7 @@ namespace GameStore.WebUI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
+            AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data"));
             //Database.SetInitializer<GameDbContext>(new DropCreateDatabaseIfModelChanges<GameDbContext>());
             Database.SetInitializer<GameDbContext>(null);
         }
